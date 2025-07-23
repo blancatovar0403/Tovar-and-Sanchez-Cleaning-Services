@@ -1,39 +1,56 @@
 body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: #ffffff; /* clean white background */
-  color: #154734; /* dark green text */
+  font-family: 'Nunito', sans-serif;
+  background-color: #ffb5b5;
+  color: #125d43;
   margin: 0;
   line-height: 1.6;
 }
 
 header {
-  background-color: #2bb673; /* bold mint green */
-  color: #ffffff; /* white text */
-  padding: 3rem 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the entire group */
+  gap: 0.5rem; /* small gap between logo and title */
+  background-color: #39b98f;
+  color: #ffffff;
+  padding: 2.5rem 1rem;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  box-shadow: 0 6px 10px rgba(43, 182, 115, 0.4);
+  box-shadow: 0 6px 10px rgba(57, 185, 143, 0.4);
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lilita One', cursive;
+  font-size: 1.5rem;
+  color: #39b98f;
+  font-weight: bold;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 2.8rem;
-  margin-bottom: 0.2rem;
-}
-
-header p {
-  font-size: 1.25rem;
-  font-style: italic;
-  opacity: 0.9;
+  font-family: 'Lilita One', cursive;
+  font-weight: 400;
+  font-size: 4.2rem;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 nav {
-  background-color: #ffc107; /* bold pineapple yellow */
+  background-color: #ffe3ab;
   text-align: center;
   padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(255, 193, 7, 0.6);
+  box-shadow: 0 2px 5px rgba(249, 231, 159, 0.6);
   border-radius: 0 0 25px 25px;
   margin-bottom: 2rem;
 }
@@ -41,14 +58,14 @@ nav {
 nav a {
   margin: 0 1.2rem;
   text-decoration: none;
-  color: #154734; /* dark green */
+  color: #125d43;
   font-weight: 600;
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #1de354; /* lighter mint on hover */
+  color: #71d8b2;
 }
 
 main {
@@ -62,15 +79,15 @@ section {
   padding: 2rem;
   margin-bottom: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 6px 15px rgba(21, 71, 52, 0.1);
+  box-shadow: 0 6px 15px rgba(18, 93, 67, 0.1);
   font-size: 1.15rem;
-  color: #154734;
+  color: #125d43;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #2bb673; /* bold mint for headings */
+  font-family: 'Lilita One', cursive;
+  font-weight: 400;
+  color: #39b98f;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -83,41 +100,41 @@ form {
 form label {
   margin: 0.5rem 0 0.25rem;
   font-weight: 600;
-  color: #2bb673;
+  color: #ff9999;
 }
 
 form input, form textarea {
   padding: 0.85rem;
-  border: 1.5px solid #2bb673;
+  border: 1.5px solid #ff9999;
   border-radius: 12px;
   font-size: 1rem;
   margin-bottom: 1.2rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Nunito', sans-serif;
   resize: vertical;
   transition: border-color 0.3s ease;
 }
 
 form input:focus, form textarea:focus {
-  border-color: #1de354;
+  border-color: #71d8b2;
   outline: none;
 }
 
 button {
-  background-color: #ffc107; /* pineapple yellow */
-  color: #154734; /* dark green */
+  background-color: #ffe3ab;
+  color: #125d43;
   border: none;
   padding: 0.85rem;
   font-size: 1.2rem;
   border-radius: 16px;
   cursor: pointer;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.6);
+  font-family: 'Lilita One', cursive;
+  box-shadow: 0 4px 8px rgba(249, 231, 159, 0.6);
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #e6ac00; /* deeper yellow on hover */
+  background-color: #ecd96f;
 }
 
 .disclaimer {
@@ -131,11 +148,11 @@ button:hover {
 footer {
   text-align: center;
   padding: 1.2rem 1rem;
-  background-color: #2bb673;
+  background-color: #ff9999;
   font-size: 0.9rem;
   color: #ffffff;
-  border-top: 1px solid #1e8a56;
-  font-family: 'Quicksand', sans-serif;
+  border-top: 1px solid #2c936e;
+  font-family: 'Nunito', sans-serif;
 }
 
 /* Mobile responsive */
@@ -149,11 +166,19 @@ footer {
     padding: 0 1rem 2rem;
   }
 
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   header h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
   }
 
   h2 {
     font-size: 1.5rem;
   }
 }
+
